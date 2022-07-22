@@ -1,0 +1,41 @@
+{
+  "name": "lens-protocol",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suhailkakar/lens-protocol.git"
+  },
+  "keywords": [
+    "lens",
+    "social-graph"
+  ],
+  "author": "Suhail Kakar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/suhailkakar/lens-protocol/issues"
+  },
+  "homepage": "https://github.com/suhailkakar/lens-protocol#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "graphql": "^16.5.0",
+    "graphql-request": "^4.3.0"
+  }
+}
