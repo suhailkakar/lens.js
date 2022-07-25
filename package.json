@@ -1,5 +1,5 @@
 {
-  "name": "lens-protocol",
+  "name": "lens.js",
   "version": "0.1.1",
   "description": "",
   "main": "dist/index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/suhailkakar/lens-protocol.git"
+    "url": "git+https://github.com/suhailkakar/lens.js.git"
   },
   "keywords": [
     "lens",
@@ -20,9 +20,9 @@
   "author": "Suhail Kakar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/suhailkakar/lens-protocol/issues"
+    "url": "https://github.com/suhailkakar/lens.js/issues"
   },
-  "homepage": "https://github.com/suhailkakar/lens-protocol#readme",
+  "homepage": "https://github.com/suhailkakar/lens.js#readme",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
