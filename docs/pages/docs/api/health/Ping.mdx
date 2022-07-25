@@ -1,0 +1,54 @@
+import Callout from 'nextra-theme-docs/callout';
+
+# Ping
+
+<Callout emoji="📘">
+  Full Code Repo - https://github.com/aave/lens-api-examples
+</Callout>
+
+<Callout emoji="🌿">
+  Lens API - [https://docs.lens.xyz/docs/ping](https://docs.lens.xyz/docs/ping)
+</Callout>
+
+Ping API `ping()` returns if the API is online.
+
+### API operation
+
+```jsx
+lensjs
+  .ping()
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+```
+
+### API response
+
+```json
+{
+  "ping": "pong"
+}
+```
+
+### Full Code Example
+
+```jsx
+import lensjs from 'lensjs';
+import { useEffect } from 'react';
+
+export default function Example() {
+  useEffect(() => {
+    lensjs
+      .ping()
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+}
+```

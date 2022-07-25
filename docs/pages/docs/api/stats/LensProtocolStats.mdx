@@ -1,0 +1,74 @@
+import Callout from 'nextra-theme-docs/callout';
+
+# Lens Protocol Stats
+
+<Callout emoji="📘">
+  Full Code Repo - https://github.com/aave/lens-api-examples
+</Callout>
+
+<Callout emoji="🌿">
+  Lens API -
+  [https://docs.lens.xyz/docs/global-protocol-stats](https://docs.lens.xyz/docs/global-protocol-stats)
+</Callout>
+
+Lens Protocol Stats API `stats()` returns the global protocol stats.
+
+### API operation
+
+```jsx
+lensjs
+  .GetGlobalProtocolStats()
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+```
+
+### API response
+
+```json
+{
+  "globalProtocolStats": {
+    "totalProfiles": 291,
+    "totalBurntProfiles": 10,
+    "totalPosts": 186,
+    "totalMirrors": 23,
+    "totalComments": 59,
+    "totalCollects": 19,
+    "totalFollows": 85,
+    "totalRevenue": [
+      {
+        "asset": {
+          "name": "Wrapped Matic",
+          "symbol": "WMATIC",
+          "decimals": 18,
+          "address": "0x9c3C9283D3e44854697Cd22D3Faa240Cfb032889"
+        },
+        "value": "6.94648"
+      }
+    ]
+  }
+}
+```
+
+### Full Code Example
+
+```jsx
+import lensjs from 'lensjs';
+import { useEffect } from 'react';
+
+export default function Example() {
+  useEffect(() => {
+    lensjs
+      .GetGlobalProtocolStats()
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+}
+```

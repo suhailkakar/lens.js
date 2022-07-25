@@ -1,0 +1,13 @@
+{
+  "*": {
+    "type": "page"
+  },
+  "index": {
+    "title": "Home",
+    "hidden": true,
+    "theme": {
+      "layout": "full"
+    }
+  },
+  "docs": "Docs"
+}
