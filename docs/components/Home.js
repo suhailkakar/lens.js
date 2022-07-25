@@ -15,7 +15,7 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title>Million</title>
+        <title>Lens.js</title>
       </Head>
       <div className=" dark:text-white h-screen flex flex-col items-center justify-center -mt-24">
         <h1 className="text-center text-6xl font-extrabold tracking-tighter leading-[1.1] sm:text-7xl lg:text-8xl xl:text-8xl">
@@ -31,15 +31,13 @@ export default function Page() {
           <code className="bg-gray-100 border-gray-200 dark:bg-gray-900 dark:border-gray-800 border shadow-sm rounded-lg p-1">
             Lens Protocol
           </code>{' '}
-          that allows you to create any kind of social media apps quickly and
-          easily
+          that allows you to create any kind of social media apps quickly and easily
         </p>
         <div className="max-w-xl mx-auto mt-8 sm:flex sm:justify-center md:mt-8">
           <div className="rounded-md">
             <button
               onClick={() => setOpen(true)}
-              className="flex items-center justify-center w-full px-8 py-3 text-md text-white no-underline border border-transparent rounded-md bg-gradient-radial from-color2 to-color2 via-color1 animate-gradient-x bg-repeat dark:text-black betterhover:dark:hover:bg-gray-300 betterhover:hover:bg-gray-700 md:py-3 md:text-lg md:px-10 md:leading-6 font-bold"
-            >
+              className="flex items-center justify-center w-full px-8 py-3 text-md text-white no-underline border border-transparent rounded-md bg-gradient-radial from-color2 to-color2 via-color1 animate-gradient-x bg-repeat dark:text-black betterhover:dark:hover:bg-gray-300 betterhover:hover:bg-gray-700 md:py-3 md:text-lg md:px-10 md:leading-6 font-bold">
               Get started →
             </button>
           </div>
