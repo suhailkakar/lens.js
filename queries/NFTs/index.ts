@@ -1,7 +1,7 @@
 import { client } from '../../utils/client';
 import { GET_USERS_NFTS } from '../../utils/queries';
 
-export const GetUsersNFTs = async (
+const GetUsersNFTs = async (
   ownerAddress: string,
   contractAddress: string,
   limit: number,
@@ -26,3 +26,5 @@ export const GetUsersNFTs = async (
       });
   });
 };
+
+export { GetUsersNFTs };

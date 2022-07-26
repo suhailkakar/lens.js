@@ -1,8 +1,5 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
+// export { default as ping } from './queries/ping';
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ping = void 0;
-var ping_1 = require("./queries/ping");
-Object.defineProperty(exports, "ping", { enumerable: true, get: function () { return __importDefault(ping_1).default; } });
+const profile_1 = require("./queries/profile");
+(0, profile_1.defaultProfile)('0x3A5bd1E37b099aE3386D13947b6a90d97675e5e3').then(console.log).catch(console.error);

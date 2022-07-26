@@ -6,7 +6,7 @@ import {
 } from '../../utils/queries';
 
 // Default profile API - This query returns the default profile for the wallet
-export const defaultProfile = async (ethereumAddress: string): Promise<object> => {
+ const defaultProfile = async (ethereumAddress: string): Promise<object> => {
   return new Promise((resolve, reject) => {
     client
       .query(GET_DEFAULT_PROFILES, {
@@ -25,7 +25,7 @@ export const defaultProfile = async (ethereumAddress: string): Promise<object> =
 };
 
 // profile by Id API - This query returns a profile using the profile id
-export const profileById = async (profileId: string): Promise<object> => {
+ const profileById = async (profileId: string): Promise<object> => {
   return new Promise((resolve, reject) => {
     client
       .query(GET_PROFILE_FROM_ID, {
@@ -43,7 +43,7 @@ export const profileById = async (profileId: string): Promise<object> => {
   });
 };
 
-export const profileByHandle = async (handle: string): Promise<object> => {
+ const profileByHandle = async (handle: string): Promise<object> => {
   return new Promise((resolve, reject) => {
     client
       .query(GET_PROFILE_FROM_ID, {
@@ -61,7 +61,7 @@ export const profileByHandle = async (handle: string): Promise<object> => {
   });
 };
 
-export const getRecommendedProfiles = async (): Promise<object> => {
+ const getRecommendedProfiles = async (): Promise<object> => {
   return new Promise((resolve, reject) => {
     client
       .query(GET_RECOMMENDED_PROFILES)
@@ -74,3 +74,5 @@ export const getRecommendedProfiles = async (): Promise<object> => {
       });
   });
 };
+
+export { defaultProfile, profileById, profileByHandle, getRecommendedProfiles };

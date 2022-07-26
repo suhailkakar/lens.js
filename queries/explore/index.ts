@@ -1,7 +1,7 @@
 import { client } from '../../utils/client';
 import { EXPLORE_PROFILES, EXPLORE_PUBLICATIONS } from '../../utils/queries';
 
-export const ExplorePublications = async (
+const ExplorePublications = async (
   sortCriteria: any,
   publicationTypes: Array<string>,
   limit: number
@@ -25,7 +25,7 @@ export const ExplorePublications = async (
   });
 };
 
-export const ExploreProfiles = async (sortCriteria: any): Promise<object> => {
+const ExploreProfiles = async (sortCriteria: any): Promise<object> => {
   return new Promise((resolve, reject) => {
     client
       .query(EXPLORE_PROFILES, {
@@ -42,3 +42,5 @@ export const ExploreProfiles = async (sortCriteria: any): Promise<object> => {
       });
   });
 };
+
+export { ExplorePublications, ExploreProfiles };

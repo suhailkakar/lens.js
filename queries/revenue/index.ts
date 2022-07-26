@@ -1,7 +1,7 @@
 import { client } from '../../utils/client';
 import { GET_PROFILE_REVENUE, GET_PUBLICATION_REVENUE } from '../../utils/queries';
 
-export const getProfileRevenue = async (profileId: string): Promise<any> => {
+const getProfileRevenue = async (profileId: string): Promise<any> => {
   return new Promise((resolve, reject) => {
     client
       .query(GET_PROFILE_REVENUE, {
@@ -19,7 +19,7 @@ export const getProfileRevenue = async (profileId: string): Promise<any> => {
   });
 };
 
-export const getPublicationRevenue = async (publicationId: string): Promise<any> => {
+const getPublicationRevenue = async (publicationId: string): Promise<any> => {
   return new Promise((resolve, reject) => {
     client
       .query(GET_PUBLICATION_REVENUE, {
@@ -36,3 +36,5 @@ export const getPublicationRevenue = async (publicationId: string): Promise<any>
       });
   });
 };
+
+export { getProfileRevenue, getPublicationRevenue };

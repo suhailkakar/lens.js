@@ -1,7 +1,7 @@
 import { client } from '../../utils/client';
 import { SEARCH } from '../../utils/queries';
 
-export const search = async (query: string, type: string, limit: number): Promise<any> => {
+const search = async (query: string, type: string, limit: number): Promise<any> => {
   return new Promise((resolve, reject) => {
     client
       .query(SEARCH, {
@@ -20,3 +20,5 @@ export const search = async (query: string, type: string, limit: number): Promis
       });
   });
 };
+
+export { search };
