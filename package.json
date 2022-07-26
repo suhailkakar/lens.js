@@ -1,13 +1,14 @@
 {
-  "name": "lens.js",
-  "version": "0.1.1",
+  "name": "lens-protocol",
+  "version": "0.1.2",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "prepare": "npm run build",
     "build": "tsc",
-    "dev": "nodemon --watch './**/*.ts' --exec 'ts-node' index.ts"
+    "dev": "nodemon --watch './**/*.ts' --exec 'ts-node' index.ts", 
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,7 @@
     "@urql/core": "^2.6.1",
     "graphql": "^16.5.0",
     "graphql-request": "^4.3.0",
-    "isomorphic-unfetch": "^3.1.0"
+    "isomorphic-unfetch": "^3.1.0",
+    "test": "^3.1.0"
   }
 }
