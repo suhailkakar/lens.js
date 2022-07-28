@@ -1,0 +1,37 @@
+# Refresh Token
+
+The `accessToken` that will be used to make requests to the API will expire every 30 minutes which means that you have to refresh it. You can do it using `refreshToken` API.
+The refresh token expires every 24 hours.
+
+### API Operation
+
+Here is an example of how to refresh the access token:
+
+```js
+Lens.RefreshToken(token).then((res) => {
+  console.log(res);
+});
+```
+
+### Full code example
+
+```jsx
+import React from 'react';
+import { Lens } from 'lens-protocol';
+export default function Login() {
+  const [refreshToken, setRefreshToken] = React.useState('');
+
+  const getNewToken = () => {
+    Lens.RefreshToken(refreshToken).then((res) => {
+      // New token (access and refresh token)
+      console.log(res);
+    });
+  };
+
+  return (
+    <div>
+      <button onClick={getNewToken}>Get new tokens</button>
+    </div>
+  );
+}
+```

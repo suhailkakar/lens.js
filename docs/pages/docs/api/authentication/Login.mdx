@@ -1,0 +1,101 @@
+# Login API
+
+Login is basic functionality of every social application. In order to authenticate a user on Lens Protocol, you need to use two APIs. The first one is to generate a challenge from the server and seconds one is to sign that challenge using your wallet and send it back to server.
+
+If the signature matches, the server will return a access token and refresh token and that can be used to authenticate the user.
+
+## Generate a challenge
+
+As mentioned above, the first step is to generate a challenge from the server. You must request a challenge form the Lens server by providing the your wallet address and the server responds with a text that can be later signed by the your wallet to prove the ownership.
+
+> The challenge text will expire after 5 minutes, if it expires you must request a new challenge. Once you have used the challenge to generate a JWT token, it will not work again.
+
+### API Operation
+
+Here is a example of how to generate a challenge:
+
+```js
+let address = '0x...';
+
+Lens.getChallenge(address).then((response) => {
+  console.log(response);
+});
+```
+
+### Response
+
+```json
+{
+  "data": {
+    "challenge": {
+      "text": "DemoApp wants you to sign in with your Ethereum account: 0x...",
+  }
+}
+```
+
+## Sign a challenge
+
+Once you recieved a challenge from Lens' server, you can sign the challenge using your wallet and send it back to the server with your address.
+
+In return, you will get a access token and refresh token from the server.
+
+- The access token will be used to authenticate the user and the refresh token will be used to generate a new access token when the old one expires.
+
+- The `access token` will expire after 30 minutes and the `refresh token` will expire after 1 days.
+
+### API Operation
+
+Here is an example of how to send a signed challenge to the server:
+
+```js
+Lens.Authenticate(address, sign).then((response) => {
+  console.log(response);
+});
+```
+
+## Hooking login together all in one
+
+Here is the full code that generates a challenge, sign it and recieves a access token and refresh token from server using `wagmi` in a `react` app.
+
+```jsx
+import React from 'react';
+import { useAccount, useSignMessage } from 'wagmi';
+import { Lens } from 'lens-protocol';
+export default function Login() {
+  const { address } = useAccount();
+  const { data, error, isLoading, signMessage } = useSignMessage({
+    onSuccess(data, variables) {
+      // Verify the signature
+      VerifySignature(data);
+    },
+  });
+
+  const authenticate = async () => {
+    // Getting the challenge from the server
+    const data = await Lens.getChallenge(address);
+    let message = data.data.challenge.text;
+    // Signing the challenge with the wallet
+    signMessage({ message });
+  };
+
+  const VerifySignature = async (sign) => {
+    // Sending the signature to the server to verify
+    const response = await Lens.Authenticate(address, sign);
+    console.log(response);
+
+    // {
+    //  data: {
+    //   authenticate: {
+    //    accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjB4YjE5QzI4OTBjZjk0N0FEM2YwYjdkN0U1QTlmZkJjZTM2ZDNmOWJkMiIsInJvbGUiOiJub3JtYWwiLCJpYXQiOjE2NDUxMDQyMzEsImV4cCI6MTY0NTEwNjAzMX0.lwLlo3UBxjNGn5D_W25oh2rg2I_ZS3KVuU9n7dctGIU",
+    //    refreshToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjB4YjE5QzI4OTBjZjk0N0FEM2YwYjdkN0U1QTlmZkJjZTM2ZDNmOWJkMiIsInJvbGUiOiJyZWZyZXNoIiwiaWF0IjoxNjQ1MTA0MjMxLCJleHAiOjE2NDUxOTA2MzF9.2Tdts-dLVWgTLXmah8cfzNx7sGLFtMBY7Z9VXcn2ZpE"
+    //   }
+    // }
+  };
+
+  return (
+    <div>
+      <button onClick={authenticate}>Login</button>
+    </div>
+  );
+}
+```

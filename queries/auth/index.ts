@@ -10,7 +10,7 @@ const getChallenge = async (address: string): Promise<object> => {
         },
       })
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {

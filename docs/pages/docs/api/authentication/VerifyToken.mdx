@@ -1,0 +1,35 @@
+# Verify Token
+
+Sometimes you need to verify the JWT token that is actually signed by the server and the user, or whether it is secure or not. This is done by using the verify function.
+
+### API Operation
+
+Here is an example of how to refresh the access token:
+
+```js
+Lens.verify(accessToken).then((res) => {
+  console.log(res);
+});
+```
+
+### Full code example
+
+```jsx
+import React, { useState } from 'react';
+import { Lens } from 'lens-protocol';
+export default function Example() {
+  const [accessToken, setAccessToken] = useState('');
+
+  const verifyToken = () => {
+    Lens.verify(accessToken).then((res) => {
+      console.log(res);
+    });
+  };
+
+  return (
+    <div>
+      <button onClick={verifyToken}>Verify Token</button>
+    </div>
+  );
+}
+```
