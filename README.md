@@ -11,7 +11,7 @@
 # Lens JS
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/suhailkakar/lens.js.svg)
 [![GitHub license](https://img.shields.io/github/license/suhailkakar/lens.js.svg)](https://github.com/suhailkakar/lens.js/blob/master/LICENSE)
-![NPM Package name](https://img.shields.io/badge/npm-lens.js-C5312A)
+![NPM Package name](https://img.shields.io/badge/npm-lensprotocol-C5312A)
 [![GitHub Shield](https://img.shields.io/badge/open-GitPod-D4973A?logo=gitpod)](https://gitpod.io/#https://github.com/suhailkakar/lens.js)
 > A JavaScript SDK for Lens Protocol
 
