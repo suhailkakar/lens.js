@@ -1,14 +1,12 @@
 {
   "name": "lens-protocol",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "prepare": "npm run build",
-    "build": "tsc",
-    "dev": "nodemon --watch './**/*.ts' --exec 'ts-node' server.ts",
-    "test": "jest"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
