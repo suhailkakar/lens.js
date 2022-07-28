@@ -8,17 +8,20 @@ import Callout from 'nextra-theme-docs/callout';
   Lens API - [https://docs.lens.xyz/docs/get-users-nfts](https://docs.lens.xyz/docs/get-users-nfts)
 </Callout>
 
-This API returns a list of NFTs that users own. You can also filter by the contract address of the NFT.
+This API allows you to find all NFTs that a user own. You can also query NFTs by contract address. Lens uses MOralis API to get the NFT data
+
+### Parameters
+
+| Name         | Type    | Example |
+| ------------ | ------- | ------- |
+| ownerAddress | String  | 0x....  |
+| limit        | Integer | 20      |
+| chainIds     | Array   | [1]     |
 
 ### API operation
 
 ```jsx
-lensjs
-  .GetUsersNFTs({
-    ownerAddress: '0x54be3a794282c030b15e43ae2bb182e14c409c5e',
-    limit: 10,
-    chainIds: [1],
-  })
+Lens.GetUsersNFTs(params)
   .then((res) => {
     console.log(res);
   })
@@ -90,18 +93,17 @@ lensjs
 ### Full Code Example
 
 ```jsx
-import lensjs from 'lensjs';
+import { Lens } from 'lens-protocol';
 import { useEffect } from 'react';
 
 export default function Example({ ownerAddress, contractAddress, chainIds, limit }) {
   useEffect(() => {
-    lensjs
-      .GetUsersNFTs({
-        ownerAddress,
-        contractAddress,
-        chainIds,
-        limit,
-      })
+    Lens.GetUsersNFTs({
+      ownerAddress,
+      contractAddress,
+      chainIds,
+      limit,
+    })
       .then((res) => {
         console.log(res);
       })

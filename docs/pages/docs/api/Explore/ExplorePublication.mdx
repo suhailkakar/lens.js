@@ -1,0 +1,47 @@
+# Explore Publications
+
+This API return a array of publications based on the sort provided to the function. Since the Lens API randomizes the content, it is impossible to see the same content twice.
+
+According to the Lens documentation, for now the API uses the basic explore logic but soon will be updated to use the advanced explore logic.
+
+### Parameters
+
+| Name             | Type    | values                                             |
+| ---------------- | ------- | -------------------------------------------------- |
+| sortCriteria     | String  | TOP_COMMENTED, TOP_COLLECTED, TOP_MIRRORED, LATEST |
+| publicationTypes | Array   | [POST, COMMENT, MIRROR]                            |
+| limit            | Integer | 1-50                                               |
+
+### API Operation
+
+Here is a example of how to use the explore publications API:
+
+```js
+Lens.ExplorePublications(params).then((res) => {
+  console.log(res);
+});
+```
+
+### Full code example
+
+```jsx
+import React from 'react';
+import { Lens } from '../../index';
+export default function Publications() {
+  const getPublications = () => {
+    Lens.ExplorePublications('LATEST', ['POST', 'COMMENT', 'MIRROR'], 10)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  return (
+    <div>
+      <button onClick={getPublications}>Explore Publication</button>
+    </div>
+  );
+}
+```

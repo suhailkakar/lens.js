@@ -1,0 +1,43 @@
+# Explore Profiles
+
+This API return a array of profiles based on the sort provided to the function.
+
+### Parameters
+
+| Name         | Type   | values                                                                                                               |
+| ------------ | ------ | -------------------------------------------------------------------------------------------------------------------- |
+| sortCriteria | String | CREATED_ON, MOST_FOLLOWERS, LATEST_CREATED, MOST_POSTS, MOST_COMMENTS, MOST_MIRRORS, MOST_PUBLICATION, MOST_COLLECTS |
+
+### API Operation
+
+Here is a example of how to use the explore publications API:
+
+```js
+Lens.ExploreProfiles(sortCriteria).then((res) => {
+  console.log(res);
+});
+```
+
+### Full code example
+
+```jsx
+import React from 'react';
+import { Lens } from 'lens-protocol';
+export default function People() {
+  const getProfiles = () => {
+    Lens.ExploreProfiles('MOST_FOLLOWERS')
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log('error', err);
+      });
+  };
+
+  return (
+    <div>
+      <button onClick={getProfiles}>Explore Profiles</button>
+    </div>
+  );
+}
+```
