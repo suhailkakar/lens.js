@@ -32,13 +32,13 @@ You can install Lens.js either using NPM and YARN.
 Inside your project directory, run the following command:
 
 ```sh
-npm install lens.js
+npm install lens-protocol
 ```
 
 Or with `yarn`:
 
 ```sh
-yarn add lens.js
+yarn add lens-protocol
 ```
 
 ## Example 
