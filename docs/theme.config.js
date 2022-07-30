@@ -5,6 +5,21 @@ export default {
   feedbackLink: () => {
     return 'Question? Give us feedback →';
   },
+  footerText: () => {
+    return (
+      <>
+        <p>
+          <small>
+            Lens.js is a open source project licensed under the
+            <a href="https://github.com/suhailkakar/lens.js/blob/main/LICENSE">MIT license</a>
+            by
+            <a href="https://twitter.com/suhailkakar">Suhail Kakar</a> - Version
+            <a href="https://www.npmjs.com/package/lens-protocol">0.1.4</a>
+          </small>
+        </p>
+      </>
+    );
+  },
   feedbackLabels: 'feedback',
   nextLinks: true,
   prevLinks: true,
