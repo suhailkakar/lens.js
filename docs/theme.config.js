@@ -9,11 +9,15 @@ export default {
     return (
       <>
         <p>
+          <script
+            defer
+            data-domain="lensjs.suhailkakar.com"
+            src="https://plausible.io/js/plausible.js"></script>
           <small>
             Lens.js is a open source project licensed under the
-            <a href="https://github.com/suhailkakar/lens.js/blob/main/LICENSE">MIT license</a>
+            <a href="https://github.com/suhailkakar/lens.js/blob/main/LICENSE"> MIT license </a>
             by
-            <a href="https://twitter.com/suhailkakar">Suhail Kakar</a> - Version
+            <a href="https://twitter.com/suhailkakar"> Suhail Kakar </a> - Version
             <a href="https://www.npmjs.com/package/lens-protocol">0.1.4</a>
           </small>
         </p>
