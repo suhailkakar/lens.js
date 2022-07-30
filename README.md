@@ -7,7 +7,6 @@
 # Lens JS
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/suhailkakar/lens.js.svg)
 [![GitHub license](https://img.shields.io/github/license/suhailkakar/lens.js.svg)](https://github.com/suhailkakar/lens.js/blob/master/LICENSE)
-![NPM Package name](https://img.shields.io/badge/npm-lensprotocol-C5312A)
 [![GitHub Shield](https://img.shields.io/badge/open-GitPod-D4973A?logo=gitpod)](https://gitpod.io/#https://github.com/suhailkakar/lens.js)
 > A JavaScript SDK for Lens Protocol
 
@@ -42,7 +41,7 @@ yarn add lens-protocol
 Using lens.js is way easier, you can check all APIs in the docs and here is a example on how to get the status of the API 
 
 ```js
-lensjs
+Lens
   .ping()
   .then((res) => {
     console.log(res);
