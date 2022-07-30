@@ -12,7 +12,7 @@ const search = async (query: string, type: string, limit: number): Promise<any> 
         },
       })
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {

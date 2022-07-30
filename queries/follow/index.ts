@@ -24,7 +24,7 @@ const FollowUser = async (profile: string, token: string): Promise<object> => {
         }
       )
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {
@@ -52,7 +52,7 @@ const UnFollowUser = async (profile: string, token: string): Promise<object> => 
         }
       )
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {
@@ -71,7 +71,7 @@ const getFollowers = async (address: string, limit: number): Promise<object> => 
         },
       })
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {
@@ -90,7 +90,7 @@ const getFollowings = async (address: string, limit: number): Promise<object> =>
         },
       })
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {

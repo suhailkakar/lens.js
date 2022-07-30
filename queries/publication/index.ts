@@ -35,7 +35,7 @@ const CreatePostTypedData = async (
         }
       )
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
 
@@ -73,7 +73,7 @@ const createCommentTypedData = async (
         }
       )
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
 
@@ -109,7 +109,7 @@ const createMirrorTypedData = async (
         }
       )
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
 
@@ -134,7 +134,7 @@ const getPublications = async (
         },
       })
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {
@@ -152,7 +152,7 @@ const getPublication = async (publicationId: string): Promise<object> => {
         },
       })
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {
@@ -180,7 +180,7 @@ const hidePublication = async (publicationId: string, token: string): Promise<ob
         }
       )
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {

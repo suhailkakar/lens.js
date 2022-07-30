@@ -16,7 +16,7 @@ const ExplorePublications = async (
         },
       })
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {
@@ -34,7 +34,7 @@ const ExploreProfiles = async (sortCriteria: any): Promise<object> => {
         },
       })
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {

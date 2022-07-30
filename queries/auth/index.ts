@@ -29,7 +29,7 @@ const Authenticate = async (address: string, signature: string): Promise<object>
         },
       })
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {
@@ -47,7 +47,7 @@ const RefreshToken = async (refreshToken: string): Promise<object> => {
         },
       })
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {
@@ -65,7 +65,7 @@ const verify = async (accessToken: string): Promise<object> => {
         },
       })
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {

@@ -6,7 +6,7 @@ const GetGlobalProtocolStats = async (): Promise<object> => {
     client
       .query(GET_GLOBAL_PROTOCOL_STATS)
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {

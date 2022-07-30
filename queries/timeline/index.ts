@@ -11,7 +11,7 @@ const getUserTimeline = async (profileId: string, limit: number): Promise<any> =
         },
       })
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {

@@ -10,7 +10,7 @@ const getProfileRevenue = async (profileId: string): Promise<any> => {
         },
       })
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {
@@ -28,7 +28,7 @@ const getPublicationRevenue = async (publicationId: string): Promise<any> => {
         },
       })
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {

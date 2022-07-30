@@ -7,7 +7,7 @@ const ping = async (): Promise<object> => {
     client
       .query(GET_PING)
       .toPromise()
-      .then(({ data }) => {
+      .then((data) => {
         resolve(data);
       })
       .catch((err) => {
