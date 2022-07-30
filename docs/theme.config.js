@@ -1,6 +1,6 @@
 export default {
   projectLink: 'https://github.com/suhailkakar/lens.js',
-  docsRepositoryBase: 'https://github.com/suhailkakar/lens.js/',
+  docsRepositoryBase: 'https://github.com/suhailkakar/lens.js/tree/main/docs/pages',
   titleSuffix: ' – Lens.js',
   feedbackLink: () => {
     return 'Question? Give us feedback →';
@@ -99,16 +99,5 @@ export default {
   },
   footerEditLink: () => {
     return 'Edit this page on GitHub →';
-  },
-  tocExtraContent: () => {
-    return (
-      <a
-        className="text-xs font-medium no-underline block text-gray-500 mb-2 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-        target="_blank"
-        rel="noreferrer"
-        href="https://github.com/suhailkakar/lens.js">
-        Become a sponsor 💝 →
-      </a>
-    );
   },
 };

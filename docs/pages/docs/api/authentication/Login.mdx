@@ -1,4 +1,12 @@
+import Callout from 'nextra-theme-docs/callout';
+
 # Login API
+
+<Callout emoji="📘">Full Code Repo - https://github.com/aave/lens-api-examples</Callout>
+
+<Callout emoji="🌿">
+  Lens API - [https://docs.lens.xyz/docs/login](https://docs.lens.xyz/docs/login)
+</Callout>
 
 Login is basic functionality of every social application. In order to authenticate a user on Lens Protocol, you need to use two APIs. The first one is to generate a challenge from the server and seconds one is to sign that challenge using your wallet and send it back to server.
 
@@ -22,7 +30,7 @@ Lens.getChallenge(address).then((response) => {
 });
 ```
 
-### Response
+### API Response
 
 ```json
 {
