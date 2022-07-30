@@ -9,8 +9,9 @@ class MyDocument extends Document {
   render() {
     const meta = {
       title: 'Lens.js',
-      description: ``,
-      image: '/icon.svg',
+      description: `Lens.js is a JavaScript SDK / API wrapper for Lens Protocol that allows you to create any kind of social media apps quickly and easily      `,
+      icon: '/icon.svg',
+      image: '/og.png',
     };
 
     return (
@@ -26,7 +27,7 @@ class MyDocument extends Document {
           <meta name="twitter:title" content={meta.title} />
           <meta name="twitter:description" content={meta.description} />
           <meta name="twitter:image" content={meta.image} />
-          <link rel="icon" type="image/png" href={meta.image} />
+          <link rel="icon" type="image/svg" href={meta.icon} />
         </Head>
         <body>
           <Main />
