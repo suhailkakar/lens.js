@@ -1,7 +1,3 @@
-
-## 🚧 This SDK is under development
-
-
 <div align="center">
   <img src="Logo.png" width="110" height="110"/>
 </div>
