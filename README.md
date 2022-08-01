@@ -8,11 +8,11 @@
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/suhailkakar/lens.js.svg)
 [![GitHub license](https://img.shields.io/github/license/suhailkakar/lens.js.svg)](https://github.com/suhailkakar/lens.js/blob/master/LICENSE)
 [![GitHub Shield](https://img.shields.io/badge/open-GitPod-D4973A?logo=gitpod)](https://gitpod.io/#https://github.com/suhailkakar/lens.js)
-> A JavaScript SDK for Lens Protocol
+> A JavaScript SDK for the Lens API
 
 <br/>
 
-Lens.js is a JavaScript SDK or a API wrapper for Lens Protocol. 
+Lens.js is a JavaScript SDK or a API wrapper for the Lens API. 
 Lens.js simplify the process of creating a social media app one more step.
 It is a simple, easy to use, and powerful API for interacting with Lens Protocol. 
 
