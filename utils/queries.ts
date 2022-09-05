@@ -631,7 +631,7 @@ export const EXPLORE_PUBLICATIONS = `
 `;
 
 export const EXPLORE_PROFILES = `
-query($request: ExploreProfileResult!) {
+query($request: ExploreProfilesRequest!) {
   exploreProfiles(request: $request) {
     items {
       id
